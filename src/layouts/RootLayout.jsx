@@ -6,10 +6,10 @@ import Sidebar from '../components/Sidebar';
 const RootLayout = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  const openSidebar = () => {
-    setIsSidebarOpen(true);
-    document.body.style.overflow = 'hidden';
-  };
+  // const openSidebar = () => {
+  //   setIsSidebarOpen(true);
+  //   document.body.style.overflow = 'hidden';
+  // };
 
   const closeSidebar = () => {
     setIsSidebarOpen(false);

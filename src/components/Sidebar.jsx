@@ -1,6 +1,6 @@
 import logo from '../assets/images/logo.svg';
 import MainNav from './MainNav';
-import Button from './Button';
+// import Button from './Button';
 // import LogOutIcon from '../assets/images/log-out.svg';
 // import RightArrowIcon from '../assets/images/right-arrow.svg';
 import { cn } from '../lib/utils';
