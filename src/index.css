@@ -5,6 +5,8 @@
 :root {
   /* colors */
   --arsenic: #434343;
+  --platinum: #E5E5E5;
+  --pansy-purple: #7F1D46;
 }
 
 body {
@@ -50,4 +52,8 @@ body {
   font-weight: 700;
   font-style: normal;
   font-display: swap;
+}
+
+input::placeholder {
+  color: #9E9E9E;
 }

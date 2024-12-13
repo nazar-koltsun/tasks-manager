@@ -3,8 +3,10 @@ import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
 const DashboardPage = () => {
-  const { isAuth, isAdmin, login, logout } = useAuth();
+  const { isAuth, isAdmin, logout } = useAuth();
   const navigate = useNavigate();
+
+  console.log(isAuth, isAdmin);
 
   useEffect(() => {
     if (!isAuth) {
@@ -12,7 +14,13 @@ const DashboardPage = () => {
     }
   }, [isAuth, navigate]);
 
-  return 'Dashboard page'
+  return (
+    <div>
+      <h1>Dashboard</h1>
+      <p>Welcome to your dashboard as <span className="text-red-500">{isAdmin ? "an ADMIN" : "a USER"}</span>!</p>
+      <button onClick={logout}>Logout</button>
+    </div>
+  );
 }
 
 export default DashboardPage;

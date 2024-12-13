@@ -10,6 +10,9 @@ module.exports = {
         inter: ['Inter', 'Arial', 'sans-serif'],
         montserrat: ['Montserrat', 'Arial', 'sans-serif'],
       },
+      boxShadow: {
+        blockShadow: '3px 2px 25px 0px rgba(190, 190, 190, 0.25)',
+      },
     },
   },
   plugins: [],

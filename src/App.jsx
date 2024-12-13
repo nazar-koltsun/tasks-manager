@@ -13,7 +13,7 @@ const router = createBrowserRouter(
       element: <RootLayout />,
       children: [
         {
-          path: '/',
+          index: true,
           element: <DashboardPage />,
         },
       ],
@@ -23,7 +23,7 @@ const router = createBrowserRouter(
       element: <BasicLayout />,
       children: [
         {
-          path: '/login',
+          index: true,
           element: <LoginPage />,
         },
       ],
