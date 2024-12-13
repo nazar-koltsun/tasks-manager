@@ -2,6 +2,9 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { cn } from '../lib/utils';
 
+import SubMenu from './SubMenu';
+import arrowIcon from '../assets/images/nav-icons/arrow.svg';
+
 const NavItem = ({ title, path, icon, submenu = [] }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -16,14 +19,14 @@ const NavItem = ({ title, path, icon, submenu = [] }) => {
         <div
           onClick={toggleSubmenu}
           className={cn(
-            'flex items-center gap-3 py-2.5 px-3 text-[var(--arsenic)] rounded-lg transition duration-200 ease-in-out cursor-pointer hover:bg-[#F6F6F6]',
-            isOpen && 'bg-[#F6F6F6]'
+            'flex items-center gap-3 py-2.5 px-3 text-[var(--arsenic)] rounded-lg transition duration-200 ease-in-out cursor-pointer hover:bg-[var(--cultured)]',
+            isOpen && 'bg-[var(--cultured)]'
           )}
         >
           <img src={icon} alt={title} />
           {title}
           <span className="ml-auto">
-            {isOpen ? '▲' : '▼'} {/* Replace with an appropriate arrow icon */}
+            <img src={arrowIcon} width={10} height={67} alt="Arrow" className={isOpen ? '' : 'rotate-180'} />
           </span>
         </div>
       ) : (
@@ -32,8 +35,8 @@ const NavItem = ({ title, path, icon, submenu = [] }) => {
           to={path}
           className={({ isActive }) =>
             cn(
-              'flex items-center gap-3 py-2.5 px-3 text-[var(--arsenic)] rounded-lg transition duration-200 ease-in-out hover:bg-[#F6F6F6]',
-              isActive && 'bg-[#F6F6F6]'
+              'flex items-center gap-3 py-2.5 px-3 text-[var(--arsenic)] rounded-lg transition duration-200 ease-in-out hover:bg-[var(--cultured)]',
+              isActive && 'bg-[var(--cultured)]'
             )
           }
         >
@@ -43,23 +46,7 @@ const NavItem = ({ title, path, icon, submenu = [] }) => {
       )}
 
       {isOpen && submenu.length > 0 && (
-        <ul className="ml-6 mt-2 space-y-2">
-          {submenu.map((item, index) => (
-            <li key={index}>
-              <NavLink
-                to={item.path}
-                className={({ isActive }) =>
-                  cn(
-                    'flex items-center gap-3 py-1.5 px-2 text-[var(--arsenic)] rounded-lg transition duration-200 ease-in-out hover:bg-[#EDEDED]',
-                    isActive && 'bg-[#EDEDED]'
-                  )
-                }
-              >
-                {item.title}
-              </NavLink>
-            </li>
-          ))}
-        </ul>
+        <SubMenu submenu={submenu} />
       )}
     </li>
   );
