@@ -16,7 +16,7 @@ const Sidebar = ({ isSidebarOpen, closeSidebar }) => {
     <>
       <aside
         className={cn(
-          'flex flex-col h-screen overflow-auto col-start-1 row-start-1 row-end-[-1] max-768:absolute z-10 top-0 left-0 bottom-0 p-[50px] pb-[282px] bg-[#7f1d4633]',
+          'flex flex-col h-full overflow-auto col-start-1 row-start-1 row-end-[-1] max-768:absolute z-10 top-0 left-0 bottom-0 p-[50px] pb-[282px] bg-[#7f1d4633]',
           !isSidebarOpen && 'max-768:hidden'
         )}
       >
