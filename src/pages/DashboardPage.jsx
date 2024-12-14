@@ -6,8 +6,6 @@ const DashboardPage = () => {
   const { isAuth, isAdmin, logout } = useAuth();
   const navigate = useNavigate();
 
-  console.log(isAuth, isAdmin);
-
   useEffect(() => {
     if (!isAuth) {
       navigate("/login"); // Redirect to login page if not authenticated
