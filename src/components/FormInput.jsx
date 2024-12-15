@@ -16,7 +16,7 @@ const FormInput = ({
       name={name}
       value={value}
       onChange={onChange}
-      className={`w-full font-nunito font-medium text-xs px-[8px] py-[6.5px] border border-[var(--platinum)] rounded-lg text-[var(--arsenic)] ${className}`}
+      className={`w-full font-nunito font-medium bg-white text-xs px-[8px] py-[6.5px] border border-[var(--platinum)] rounded-lg text-[var(--arsenic)] ${className}`}
       placeholder={placeholder}
       required={required}
       {...props}
