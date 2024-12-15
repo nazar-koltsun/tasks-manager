@@ -10,6 +10,8 @@ const AddNewTask = () => {
     e.preventDefault();
   };
 
+  const todayDate = new Date().toISOString().split("T")[0];
+
   return (
     <>
       <div className='flex items-center gap-2'>
@@ -59,6 +61,7 @@ const AddNewTask = () => {
             type="date"
             name="date"
             placeholder="Enter date"
+            defaultValue={todayDate}
             required
           />
         </div>
