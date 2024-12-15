@@ -9,15 +9,15 @@ import arrowIcon from '../assets/images/nav-icons/arrow.svg';
 import infoIcon from '../assets/images/info.svg';
 import exitIcon from '../assets/images/exit.svg';
 
-const Sidebar = ({ isSidebarOpen, closeSidebar }) => {
+const Sidebar = ({ isOpen, closeSidebar }) => {
   const { isAdmin, logout } = useAuth();
 
   return (
     <>
       <aside
         className={cn(
-          'flex flex-col h-full overflow-auto col-start-1 row-start-1 row-end-[-1] max-768:absolute z-10 top-0 left-0 bottom-0 p-[50px] pb-[282px] bg-[#7f1d4633]',
-          !isSidebarOpen && 'max-768:hidden'
+          'flex flex-col h-full overflow-auto col-start-1 row-start-1 row-end-[-1] max-768:absolute max-768:w-[240px] z-20 top-0 left-0 bottom-0 p-[50px] pb-[282px] max-1024:p-6 max-1024:pb-36 bg-[#e5d2da]',
+          !isOpen && 'max-768:hidden'
         )}
       >
         <img className="ml-3" src={logo} width={101} height={54} alt="Logo" />
@@ -69,8 +69,8 @@ const Sidebar = ({ isSidebarOpen, closeSidebar }) => {
       </aside>
       <div
         className={cn(
-          'hidden max-768:block absolute z-0 top-0 right-0 bottom-0 w-full left-0 bg-black opacity-50',
-          !isSidebarOpen && 'max-768:hidden'
+          'hidden max-768:block absolute z-10 top-0 right-0 bottom-0 w-full left-0 bg-black opacity-50',
+          !isOpen && 'max-768:hidden'
         )}
         onClick={() => closeSidebar()}
       ></div>

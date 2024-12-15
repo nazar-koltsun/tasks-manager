@@ -146,7 +146,7 @@ const DashboardPage = () => {
       <Table
         data={isAdmin ? TABLE_DATA_ADMIN : TABLE_DATA_USER}
         sortableArr={['Project', 'Przypisano', 'Data dodania', 'Status']}
-        className="mt-4"
+        className="mt-4 w-[calc(100vw-405px)] max-1024:w-[calc(100vw-272px)] max-768:w-[calc(100vw-32px)]"
       />
 
       <Modal isOpen={isModalOpen} onClose={closeModal}>

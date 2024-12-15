@@ -8,7 +8,7 @@ const Header = ({ openSidebar }) => {
   const { isAdmin } = useAuth();
 
   return (
-    <header className="col-start-2 max-768:col-start-1 flex px-[35px] pt-5 pb-3 shadow-headerShadow border-b border-[var(--platinum)]">
+    <header className="col-start-2 max-768:col-start-1 max-768:col-end-[-1] flex px-[35px] pt-5 pb-3 max-1024:px-4 max-1024:pt-3 max-1024:pb-2 shadow-headerShadow border-b border-[var(--platinum)]">
       <Button
         className="hidden max-768:flex px-3 py-[18px] hover:opacity-50"
         variant="flat"

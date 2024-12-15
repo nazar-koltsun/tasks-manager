@@ -51,7 +51,7 @@ const Table = ({ data, sortableArr = [], className }) => {
   return (
     <div
       className={cn(
-        'text-[var(--electric-blue)] overflow-x-auto w-[calc(100vw-390px)] max-1024:w-[calc(100vw-255px)] max-768:w-[calc(100vw-55px)]',
+        'text-[var(--electric-blue)] overflow-x-auto w-full',
         className
       )}
     >

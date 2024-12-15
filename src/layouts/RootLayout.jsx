@@ -19,10 +19,10 @@ const RootLayout = () => {
 
   return (
     <>
-      <div className="grid grid-cols-[310px_1fr] grid-rows-[auto_1fr] min-h-screen font-nunito text-sm">
+      <div className="grid grid-cols-[310px_1fr] max-1024:grid-cols-[240px_1fr] grid-rows-[auto_1fr] min-h-screen font-nunito text-sm">
         <Header openSidebar={openSidebar} />
         <Sidebar isOpen={isSidebarOpen} closeSidebar={closeSidebar} />
-        <main className="col-start-2 max-768:col-start-1 p-10">
+        <main className="col-start-2 max-768:col-start-1 max-768:col-end-[-1] p-10 max-1024:p-4 max-1024:pt-6">
           <Outlet />
         </main>
       </div>

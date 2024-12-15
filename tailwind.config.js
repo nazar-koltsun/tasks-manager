@@ -13,6 +13,7 @@ module.exports = {
         headerShadow: '3px 3px 20px 1px #C4C4C4',
       },
       screens: {
+        'max-1024': { max: '1024px' },
         'max-768': { max: '768px' },
       },
     },

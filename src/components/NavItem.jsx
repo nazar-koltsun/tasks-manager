@@ -35,7 +35,7 @@ const NavItem = ({ title, path, icon, submenu = [] }) => {
           to={path}
           className={({ isActive }) =>
             cn(
-              'flex items-center gap-3 py-2.5 px-3 text-[var(--arsenic)] rounded-lg transition duration-200 ease-in-out hover:bg-[var(--cultured)]',
+              'flex items-center gap-3 py-2.5 px-3 text-[var(--arsenic)] rounded-lg transition duration-200 ease-in-out hover:bg-[var(--cultured)] font-medium',
               isActive && 'bg-[var(--cultured)]'
             )
           }
