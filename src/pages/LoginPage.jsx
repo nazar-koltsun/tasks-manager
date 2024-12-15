@@ -24,7 +24,7 @@ const LoginPage = () => {
 
   return (
     <div className="h-screen box-border p-4 relative"> 
-      <div className="flex flex-col items-center gap-[85px] w-[320px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-[-200px]">
+      <div className="flex flex-col items-center gap-[85px] max-768:gap-[40px] w-[320px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-[-10vh]">
         <img src={Logo} width={97} height={27} alt="Logo" />
 
         <Card className='flex flex-col items-center w-full'>
