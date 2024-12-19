@@ -68,6 +68,14 @@ input::placeholder {
   color: #9E9E9E;
 }
 
+select {
+  color: var(--arsenic);
+}
+
+select {
+  border-radius: 8px;
+}
+
 progress::-webkit-progress-bar {
   background-color: transparent;
 }
