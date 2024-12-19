@@ -70,9 +70,6 @@ input::placeholder {
 
 select {
   color: var(--arsenic);
-}
-
-select {
   border-radius: 8px;
 }
 
